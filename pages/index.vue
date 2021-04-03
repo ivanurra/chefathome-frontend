@@ -1,6 +1,6 @@
 <template>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
+  <div>
+    <img src="../static/chefathomelogo.png" alt="ChefAtHome logo">
+  </div>
 </template>
 
