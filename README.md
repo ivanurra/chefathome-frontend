@@ -1,9 +1,7 @@
 # Chef at home
 # chefathome-frontend
 
-### Important: Backend is in another repo called: chefathome-backend
-
-![Screenshot](static/chefathomelogo.png)
+![Screenshot](static/chefathomegithub.png)
 
 ## Starting 🚀
 
