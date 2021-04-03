@@ -4,3 +4,8 @@
   </div>
 </template>
 
+<style scoped>
+* {
+  background-color: black;
+}
+</style>
