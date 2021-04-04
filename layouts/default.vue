@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <v-app>
     <Header />
-        <Nuxt />
+    <v-main>
+      <Nuxt />
+    </v-main>
     <Footer />
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -16,3 +18,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+*{
+  background-color: black;
+}
+</style>

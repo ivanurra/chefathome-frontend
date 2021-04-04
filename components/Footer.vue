@@ -1,16 +1,9 @@
 <template>
-  <v-app>
-    <v-footer dark>
-      <v-row
-        justify="center"
-      >
-        <v-col
-          class="black py-4 text-center white--text"
-          cols="12"
-        >
+    <v-footer dark :app="$vuetify.breakpoint.mdAndUp" :absolute="$vuetify.breakpoint.mdAndUp">
+      <v-container class="d-flex">
+        <v-col align="center">
           {{ new Date().getFullYear() }} (C)<strong> Iván Urra</strong>
         </v-col>
-      </v-row>
+      </v-container>
     </v-footer>
-  </v-app>
 </template>
