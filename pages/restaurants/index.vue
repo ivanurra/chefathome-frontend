@@ -1,13 +1,12 @@
 <template>
   <div>
-      <form>
-          <span></span>
-          <input v-model="query" type="search" placeholder="Search...">
-      </form>
-      <div v-for="restaurant in filteredList" v-bind:key="restaurant">
+      <v-form>
+          <v-text-field v-model="query" background-color="black" color="white" label="Search restaurants" placeholder="Search restaurants"></v-text-field>
+      </v-form>
+      <v-card v-for="restaurant in filteredList" v-bind:key="restaurant">
           <div>
               <img :src="'http://localhost:1337/' + restaurant.image.url" alt="">
-              <canvas width="600" height="400"></canvas>
+              <canvas width="300" height="200"></canvas>
           </div>
           <div>
               <div>
@@ -18,9 +17,8 @@
                   </router-link>
               </div>
           </div>
-      </div>
+      </v-card>
       <div v-if="filteredList.length == 0">
-       <img src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png" height="800" width="800">
        <p>No restaurants found</p>
      </div>
   </div>
