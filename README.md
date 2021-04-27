@@ -1,6 +1,8 @@
 # Chef at home
 ### chefathome-frontend
 
+App for food delivery.
+
 ![Screenshot](static/chefathomegithub.png)
 
 ## Starting 🚀
