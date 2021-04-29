@@ -1,26 +1,35 @@
 <template>
   <div>
-      <v-form>
-          <v-text-field v-model="query" background-color="black" color="white" label="Search restaurants" placeholder="Search restaurants"></v-text-field>
-      </v-form>
-      <v-card v-for="restaurant in filteredList" v-bind:key="restaurant">
-          <div>
-              <img :src="'http://localhost:1337/' + restaurant.image.url" alt="">
-              <canvas width="300" height="200"></canvas>
-          </div>
-          <div>
-              <div>
-                  <h3>{{ restaurant.name }}</h3>
-                  <p>{{ restaurant.description }}</p>
-                  <router-link :to="{ name: 'restaurants-id', params: { id: restaurant.id }}" tag="a">
-                    See dishes
-                  </router-link>
-              </div>
-          </div>
-      </v-card>
-      <div v-if="filteredList.length == 0">
-       <p>No restaurants found</p>
-     </div>
+    <v-form>
+      <v-text-field
+        v-model="query"
+        background-color="black"
+        color="white"
+        label="Search restaurants"
+        placeholder="Search restaurants"
+      ></v-text-field>
+    </v-form>
+    <v-card v-for="restaurant in filteredList" v-bind:key="restaurant">
+      <div>
+        <img :src="'http://localhost:1337/' + restaurant.image.url" alt="" />
+        <canvas width="300" height="200"></canvas>
+      </div>
+      <div>
+        <div>
+          <h3>{{ restaurant.name }}</h3>
+          <p>{{ restaurant.description }}</p>
+          <router-link
+            :to="{ name: 'restaurants-id', params: { id: restaurant.id } }"
+            tag="a"
+          >
+            See dishes
+          </router-link>
+        </div>
+      </div>
+    </v-card>
+    <div v-if="filteredList.length == 0">
+      <p>No restaurants found</p>
+    </div>
   </div>
 </template>
 
@@ -33,22 +42,22 @@ export default {
     return {
       // Initialize an empty restaurants variabkle
       restaurants: [],
-      query: ''
+      query: '',
     }
   },
   apollo: {
     restaurants: {
       prefetch: true,
-      query: restaurantsQuery
-    }
+      query: restaurantsQuery,
+    },
   },
   computed: {
     // Search system
     filteredList() {
-      return this.restaurants.filter(restaurant => {
+      return this.restaurants.filter((restaurant) => {
         return restaurant.name.toLowerCase().includes(this.query.toLowerCase())
       })
     },
-  }
+  },
 }
 </script>
