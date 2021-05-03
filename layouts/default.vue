@@ -21,6 +21,6 @@ export default {
 
 <style scoped>
 * {
-  background-color: black;
+  background-color: white;
 }
 </style>

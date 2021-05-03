@@ -3,8 +3,8 @@
     <v-form>
       <v-text-field
         v-model="query"
-        background-color="black"
-        color="white"
+        background-color="white"
+        color="black"
         label="Search restaurants"
         placeholder="Search restaurants"
       ></v-text-field>
