@@ -5,7 +5,7 @@
   >
     <v-container class="d-flex">
       <v-col align="center">
-        {{ new Date().getFullYear() }} (C)<strong> Made by Iván Urra</strong>
+        {{ new Date().getFullYear() }} (c)<strong> Chef at Home.</strong> Made by Iván Urra
       </v-col>
     </v-container>
   </v-footer>

@@ -3,7 +3,7 @@
 
 App for food delivery.
 
-![Screenshot](static/chefathomegithub.png)
+![Screenshot](static/logomain.png)
 
 ## Starting 🚀
 
